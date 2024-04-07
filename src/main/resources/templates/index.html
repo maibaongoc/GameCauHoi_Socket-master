@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Khoot</title>
+    <link rel="stylesheet" th:href="@{/index.css}" />
+</head>
+<body>
+<div id="menu-page">
+    <h1 style="color: rgb(71, 183, 67); font-size: 50px;">Chào mừng bạn đến với Game Khoot</h1>
+    <div class="btn-menu-page">
+        <button class="btn-create">Create</button>
+        <button class="btn-join">Vào Phòng</button>
+    </div>
+</div>
+<div id="game-page" class="hidden">
+   <div class="room-wait">
+       <h3 class="info-room">List Of Player: Room</h3>
+       <div class="list-player">
+           <ul class="list-player-room">
+
+           </ul>
+       </div>
+       <Button class="btn-play hidden">Play</Button>
+   </div>
+    <div class="room-play hidden">
+            <div class="room-play">
+                <h2 class="question">Câu hỏi: A là người thuận yêu nhất</h2>
+                <ol class="list-anwser">
+                    <li ><strong>A</strong> Lựa chọn A</li>
+                    <li ><strong>B</strong> Lựa chọn B</li>
+                    <li ><strong>C</strong> Lựa chọn C</li>
+                    <li ><strong>D</strong> Lựa chọn D</li>
+                </ol>
+                <div id="timer">Thời gian còn lại: <span id="countdown">10</span> giây</div>
+            </div>
+    </div>
+</div>
+<div id="Rating-page" class="hidden">
+    <div class="ranking-container" id="rankingContainer">
+        <!-- Ranking items will be added dynamically using JavaScript -->
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/app.js}"></script>
+<script type="text/javascript" th:src="@{/sockjs.min.js}"></script>
+<script type="text/javascript" th:src="@{/stomp.min.js}"></script>
+</body>
+</html>
